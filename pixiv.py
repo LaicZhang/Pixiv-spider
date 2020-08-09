@@ -5,6 +5,7 @@
 from urllib import request
 import threading
 import queue
+import time
 import re
 import os
 
@@ -21,6 +22,7 @@ class pixiv:
             "Accept-Encoding": "",
             "Connection": "keep-alive",
         }
+        self.sleep_time = 3
         self.data_low = []
         self.num = 0
 
@@ -104,6 +106,7 @@ class pixiv:
         fp.write(data)
         fp.close()
         self.num += 1
+        time.sleep(self.sleep_time)
         print("Pixiv Image: [ OK | {} ]".format(file))
 
     def add_queue(self, _queue, data_list=None):
