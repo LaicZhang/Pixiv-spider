@@ -24,3 +24,6 @@ python3 pixiv.py "673179"
 # By RankLink:
 python3 pixiv.py "https://www.pixiv.net/ranking.php?mode=male"
 ```
+
+# Related
+- https://github.com/MoeClub/Pixiv
